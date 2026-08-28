@@ -1,0 +1,14 @@
+# Python environments and caches
+myenv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+
+# Local installer artifacts
+*.whl
+
+# Editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
