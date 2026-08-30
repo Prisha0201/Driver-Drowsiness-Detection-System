@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import dlib
+import winsound
 from imutils import face_utils
 
 cap = cv2.VideoCapture(0)
@@ -65,6 +66,7 @@ while True:
             if sleep > 6:
                 status = "alert SLEEPING !!!"
                 color = (255, 0, 0)
+                winsound.Beep(2500, 1000)
         elif left_blink == 1 or right_blink == 1:
             sleep = 0
             active = 0
@@ -72,6 +74,7 @@ while True:
             if drowsy > 6:
                 status = "Drowsy ! wake up wake up"
                 color = (0, 0, 255)
+                winsound.Beep(1000, 500)
         else:
             drowsy = 0
             sleep = 0
